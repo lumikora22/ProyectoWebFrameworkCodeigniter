@@ -19,4 +19,25 @@ class Album_model extends CI_Model
     $query = $this->db->get_where('albums',['id'=>$id]);
     return $query->result();
   }
+
+  public function deleteAlbumById($id)
+  {
+      // $this->db->delete('editoriales', array('id' => $id));
+     $this->db->delete('albums',array('id' => $id));
+  }
+  function update($id, $nombre)
+  {
+      $this->db->where('id', $id);
+      $this->db->set('nombre', $nombre);
+      return $this->db->update('editoriales');
+  }
+
+  //   public function add()
+  // {
+  //     $data = array(
+  //         'nombre'   => $this->input->post('nombre'),
+  //     );
+  //     return $this->db->insert('editoriales', $data);
+  // }
+ 
 }

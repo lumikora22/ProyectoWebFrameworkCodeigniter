@@ -25,7 +25,7 @@
           <td><?=$album->author?></td>
           <td><?=$album->name_g?></td>
           <td><a href="album/edit/<?=$album->id?>">Edit</a></td>
-          <td><a href="album/delete/<?=$album->id?>">Delete</a></td>
+          <td><a href="album/deleteview/<?=$album->id?>">Delete</a></td>
           </tr>
         <?php endforeach; ?>
       </tbody>

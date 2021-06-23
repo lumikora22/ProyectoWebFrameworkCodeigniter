@@ -12,8 +12,15 @@
     <div class="Container">
         <h1>¿Desea Eliminar el album?</h1>
         <p>Album :  <?=$album->name?></p>
-        <button class="btn btn-primary">Si</button>
+        <a href="../../album/delete/<?=$album->id?>"><button class="btn btn-primary" onclick=eliminar()>Si</button></a>
+        
         <button class="btn btn-danger">NO</button>
     </div>
 </body>
 </html>
+
+<script>
+    // function eliminar(){
+    //     alert('<?php echo "HOLA"; ?>')
+    // }
+</script>

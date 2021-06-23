@@ -9,7 +9,7 @@
   <body>
     <h1>Edit Album</h1>
   </body>
-  <form class="" action="update" method="post">
+  <form class="" action="save" method="post">
     <label for="name">Name</label>
     <input type="text" name="name" id="name" value="<?=$album->name?>">
     <label for="author">Author</label>

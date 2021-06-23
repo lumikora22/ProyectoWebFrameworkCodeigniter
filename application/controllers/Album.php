@@ -32,7 +32,7 @@ class Album extends CI_Controller {
 		$data['genres'] = $genres;
 		$this->load->view('album/edit',$data);
 	}
-	public function delete($id){
+	public function deleteview($id){
 
 		$this->load->model('album_model','album');
 		$album = $this->album->albumById($id);
@@ -43,6 +43,12 @@ class Album extends CI_Controller {
 		$data['album']=$album[0];
 		// $data['genres']=$genres;
 		$this->load->view('album/delete',$data);
+	}
+	public function delete ($id){
+		$this->load->model('album_model','album');
+		$album = $this->album->deleteAlbumById($id);
+
+		echo "El album fue eliminado";
 	}
 	/*Update fields*/
 	public function update(){
