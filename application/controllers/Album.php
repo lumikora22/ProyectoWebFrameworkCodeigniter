@@ -54,19 +54,18 @@ class Album extends CI_Controller {
 	public function update($id){
 		// if(is_numeric($id)){
 		// 	$datos["mod"]=$this->album->updateById($id);
-			if($this->input->post("submit")){
+			// if($this->input->post("submit")){
+				$this->load->model('album_model','album');
 				$mod= $this->album->updateById(
 					$id,
 					$this->input->post("submit"), 
 					$this->input->post("name"),
 					$this->input->post("author"),
 					$this->input->post("genre"),
-
+					
 				);
-			}
-		
-		
-		echo "vamos a actualizar";
+
+		echo "Album Actualizado";
 	}
 
 

@@ -9,8 +9,7 @@
   <body>
     <h1>Edit Album</h1>
   </body>
-  <form class="form" action="save" method="POST" style="width:500px">
-    <?php foreach ($mod as $fila) { ?>
+  <form class="form" action="../../album/update/<?=$album->id?>" method="POST" style="width:500px">
     <label for="name" class="form-label">Name</label>
     <input class="form-control" type="text" name="name" id="name" value="<?=$album->name?>">
     <label for="author" class="form-label">Author</label>
@@ -23,7 +22,6 @@
     </select>
     <!-- ../../album/delete/<?=$album->id?> -->
     <input class="btn btn-primary gy-2" type="submit" name="button">Actualizar</input>
-    <?php } ?>
   </form>
 </html>
     <!-- <a href="../../album/update"> -->
@@ -31,4 +29,6 @@
   function Event(e){
     e.preventDefault();
   }
+  form = document.querySelector(".form");
+
 </script>
