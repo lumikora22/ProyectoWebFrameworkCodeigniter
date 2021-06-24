@@ -51,16 +51,20 @@ class Genre extends CI_Controller {
 				);
 
 		echo "Genero Actualizado";
+		
 	}
 
-	public function new(){
-		$this->load->view("genre/new");
+	public function add(){
+		
+		$this->load->view("genre/add");
 	}
 
 	public function save(){
 		$name= $this->input->post('name');
 		$this->load->model('genre_model','genre');
 		$this->genre->save($name);
+
+		echo "El genero se agrego correctamente";
 	}
 
 }

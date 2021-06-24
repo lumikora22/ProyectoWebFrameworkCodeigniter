@@ -62,6 +62,31 @@ class Album extends CI_Controller {
 		echo "Album Actualizado";
 	}
 
+	public function add(){
+		$this->load->model('album_model','album');
+		$albums= $this->album->album_all();
+		$this->load->model('genre_model','genre');
+		$genres=$this->genre->genre_all();
+		$data['album']= $albums;
+		$data['genres'] = $genres;
+		$this->load->view("album/add",$data);
+	}
+
+	public function save(){
+		$data = array(
+			'name' => $this->input->post('name'),
+			'author' => $this->input->post('author'),
+			'genre_id' => $this->input->post('genre'),
+		);
+		$this->load->model('album_model','album');
+		$this->album->insert($data);
+		
+		
+		// $this->load->model('album_model','album');
+		// $this->album->save($name,$autor,$genre);
+
+		echo "El Album se agrego correctamente";
+	}
 
 
 

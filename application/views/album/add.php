@@ -15,32 +15,21 @@
   </head>
   <body>
   <div class="formContainer">
-
-  <h1>Edit Album</h1>
-  <form class="form" action="../../album/update/<?=$album->id?>" method="POST" style="width:500px">
+    <h1>Agregar Album</h1>
+    <form class="form" action="../../album/save/" method="POST" style="width:500px">
     <label for="name" class="form-label">Name</label>
-    <input class="form-control" type="text" name="name" id="name" value="<?=$album->name?>">
+    <input class="form-control" type="text" name="name" id="name" value="">
     <label for="author" class="form-label">Author</label>
-    <input class="form-control" type="text" name="author" id="author" value="<?=$album->author?>">
+    <input class="form-control" type="text" name="author" id="author" value="">
     <label for="genre" class="form-label">Genre</label>
     <select class="form-select" name="genre" id="genre">
       <?php foreach ($genres as $key => $genre): ?>
         <option value="<?=$genre->id?>"><?=$genre->name?></option>
       <?php endforeach; ?>
     </select>
-    <input class="btn btn-primary gy-2" type="submit" name="button" value="Actualizar Album"></input>
+    <input class="btn btn-primary gy-2" type="submit" name="button" value="Agregar Album"></input>
   </form>
   </div>
-  
-   
   </body>
   
 </html>
-    <!-- <a href="../../album/update"> -->
-<script>
-  function Event(e){
-    e.preventDefault();
-  }
-  form = document.querySelector(".form");
-
-</script>

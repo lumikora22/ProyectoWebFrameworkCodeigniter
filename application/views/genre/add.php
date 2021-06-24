@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  <title>Editar Genero</title>
+  <title>Agregar Genero</title>
   <style>
     .formContainer{
       display: flex;
@@ -16,14 +16,13 @@
     </style>
 </head>
 <body>
-
   
   <div class="formContainer">
-  <h1>Editar Genero</h1>
-    <form class="form" action="../../genre/update/<?=$genre->id?>" method="POST" style="width:500px">
+  <h1>Agregar Genero</h1>
+    <form class="form" action="../../genre/save" method="POST" style="width:500px">
       <label for="" class="form-label">Nombre</label>
-      <input class="form-control" type="text" name="name" id="name" value="<?=$genre->name?>">
-      <input class="btn btn-primary" type="submit" value="Actualizar Genero">
+      <input class="form-control" type="text" name="name" id="name" value="">
+      <input class="btn btn-primary" type="submit" value="Agregar Genero">
     </form>
   </div>
 </body>

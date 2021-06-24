@@ -40,6 +40,10 @@ class Album_model extends CI_Model
     return $this->db->update('albums');
   }
 
+  public function insert($data){
+
+   return  $this->db->insert('albums',$data);
+
   //   public function add()
   // {
   //     $data = array(
@@ -47,5 +51,5 @@ class Album_model extends CI_Model
   //     );
   //     return $this->db->insert('editoriales', $data);
   // }
- 
+  }
 }

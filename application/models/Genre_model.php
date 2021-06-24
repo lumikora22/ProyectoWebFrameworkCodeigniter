@@ -14,6 +14,7 @@ class Genre_model extends CI_Model
     return $query->result();
   }
   public function save($name){
+    
     $this->db->insert('genres',['name'=>$name]);
   }
 
