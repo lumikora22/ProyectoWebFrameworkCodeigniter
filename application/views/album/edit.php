@@ -9,17 +9,26 @@
   <body>
     <h1>Edit Album</h1>
   </body>
-  <form class="" action="save" method="post">
-    <label for="name">Name</label>
-    <input type="text" name="name" id="name" value="<?=$album->name?>">
-    <label for="author">Author</label>
-    <input type="text" name="author" id="author" value="<?=$album->author?>">
-    <label for="genre">Genre</label>
-    <select class="" name="genre" id="genre">
+  <form class="form" action="save" method="POST" style="width:500px">
+    <?php foreach ($mod as $fila) { ?>
+    <label for="name" class="form-label">Name</label>
+    <input class="form-control" type="text" name="name" id="name" value="<?=$album->name?>">
+    <label for="author" class="form-label">Author</label>
+    <input class="form-control" type="text" name="author" id="author" value="<?=$album->author?>">
+    <label for="genre" class="form-label">Genre</label>
+    <select class="form-select" name="genre" id="genre">
       <?php foreach ($genres as $key => $genre): ?>
         <option value="<?=$genre->id?>"><?=$genre->name?></option>
       <?php endforeach; ?>
     </select>
-    <button type="submit" name="button">Aceptar</button>
+    <!-- ../../album/delete/<?=$album->id?> -->
+    <input class="btn btn-primary gy-2" type="submit" name="button">Actualizar</input>
+    <?php } ?>
   </form>
 </html>
+    <!-- <a href="../../album/update"> -->
+<script>
+  function Event(e){
+    e.preventDefault();
+  }
+</script>

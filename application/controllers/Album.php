@@ -51,7 +51,21 @@ class Album extends CI_Controller {
 		echo "El album fue eliminado";
 	}
 	/*Update fields*/
-	public function update(){
+	public function update($id){
+		// if(is_numeric($id)){
+		// 	$datos["mod"]=$this->album->updateById($id);
+			if($this->input->post("submit")){
+				$mod= $this->album->updateById(
+					$id,
+					$this->input->post("submit"), 
+					$this->input->post("name"),
+					$this->input->post("author"),
+					$this->input->post("genre"),
+
+				);
+			}
+		
+		
 		echo "vamos a actualizar";
 	}
 
