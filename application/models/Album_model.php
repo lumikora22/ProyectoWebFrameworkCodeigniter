@@ -30,11 +30,12 @@ class Album_model extends CI_Model
     // $this->db->select('albums.id, albums.name,albums.author, genres.name as name_g');
     $this->db->select('albums.id, albums.name,albums.author, genres.name as name_g');
     $this->db->from('albums');
-    $this->db->where('albums.id', $id);
+    $this->db->join('genres', 'albums.genre_id = genres.id');
     $this->db->set('albums.name', $nombre);
     $this->db->set('albums.author', $autor);
-    // $this->db->join('genres', 'albums.genre_id = genres.id');
-    // $this->db->set('name_g',$genre);
+    $this->db->set('albums.genre_id',$genre);
+    $this->db->where('albums.id', $id);
+    
 
     return $this->db->update('albums');
   }
