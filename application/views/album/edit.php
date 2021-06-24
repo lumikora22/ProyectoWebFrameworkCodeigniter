@@ -20,8 +20,7 @@
         <option value="<?=$genre->id?>"><?=$genre->name?></option>
       <?php endforeach; ?>
     </select>
-    <!-- ../../album/delete/<?=$album->id?> -->
-    <input class="btn btn-primary gy-2" type="submit" name="button">Actualizar</input>
+    <input class="btn btn-primary gy-2" type="submit" name="button" value="Actualizar Album"></input>
   </form>
 </html>
     <!-- <a href="../../album/update"> -->

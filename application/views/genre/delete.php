@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="Container">
-        <h1>¿Desea Eliminar el album?</h1>
-        <p>Album :  <?=$album->name?></p>
-        <a href="../../album/delete/<?=$album->id?>"><button class="btn btn-primary" >Si</button></a>
+        <h1>¿Desea Eliminar el genero?</h1>
+        <p>Genero :  <?=$genre->name?></p>
+        <a href="../../genre/delete/<?=$genre->id?>"><button class="btn btn-primary" >Si</button></a>
         
         <a href="../"><button class="btn btn-danger">NO</button></a>
     </div>

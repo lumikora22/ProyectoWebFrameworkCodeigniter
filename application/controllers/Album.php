@@ -37,11 +37,8 @@ class Album extends CI_Controller {
 		$this->load->model('album_model','album');
 		$album = $this->album->albumById($id);
 
-		// $this->load->model('genre_model','genre');
-		// $genres=$this->genre->genre_all();
-
 		$data['album']=$album[0];
-		// $data['genres']=$genres;
+
 		$this->load->view('album/delete',$data);
 	}
 	public function delete ($id){
@@ -52,9 +49,6 @@ class Album extends CI_Controller {
 	}
 	/*Update fields*/
 	public function update($id){
-		// if(is_numeric($id)){
-		// 	$datos["mod"]=$this->album->updateById($id);
-			// if($this->input->post("submit")){
 				$this->load->model('album_model','album');
 				$mod= $this->album->updateById(
 					$id,
